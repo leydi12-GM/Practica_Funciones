@@ -6,7 +6,7 @@
     <title>15 Funciones - Formularios</title>
     <!-- Vinculamos el CSS -->
     <link rel="stylesheet" href="style/style.css">
-    <!-- Vinculamos el JS con las funciones matemáticas -->
+    <!-- Vinculamos el JS con las funciones integradas -->
     <script src="js/funciones.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
             <h3>1. Sumar</h3>
             <input type="number" id="sum1" placeholder="Número 1">
             <input type="number" id="sum2" placeholder="Número 2">
-            <button onclick="ejecutarSuma()">Calcular</button>
+            <button onclick="sumar()">Calcular</button>
             <p id="res-sum">Resultado: </p>
         </div>
 
@@ -27,7 +27,7 @@
             <h3>2. Restar</h3>
             <input type="number" id="res1" placeholder="Número 1">
             <input type="number" id="res2" placeholder="Número 2">
-            <button onclick="ejecutarResta()">Calcular</button>
+            <button onclick="restar()">Calcular</button>
             <p id="res-res">Resultado: </p>
         </div>
 
@@ -36,7 +36,7 @@
             <h3>3. Multiplicar</h3>
             <input type="number" id="mul1" placeholder="Número 1">
             <input type="number" id="mul2" placeholder="Número 2">
-            <button onclick="ejecutarMultiplicar()">Calcular</button>
+            <button onclick="multiplicar()">Calcular</button>
             <p id="res-mul">Resultado: </p>
         </div>
 
@@ -45,7 +45,7 @@
             <h3>4. Dividir</h3>
             <input type="number" id="div1" placeholder="Dividendo">
             <input type="number" id="div2" placeholder="Divisor">
-            <button onclick="ejecutarDividir()">Calcular</button>
+            <button onclick="dividir()">Calcular</button>
             <p id="res-div">Resultado: </p>
         </div>
 
@@ -53,7 +53,7 @@
         <div class="tarjeta">
             <h3>5. Cuadrado</h3>
             <input type="number" id="cua1" placeholder="Número">
-            <button onclick="ejecutarCuadrado()">Calcular</button>
+            <button onclick="cuadrado()">Calcular</button>
             <p id="res-cua">Resultado: </p>
         </div>
 
@@ -61,7 +61,7 @@
         <div class="tarjeta">
             <h3>6. Cubo</h3>
             <input type="number" id="cub1" placeholder="Número">
-            <button onclick="ejecutarCubo()">Calcular</button>
+            <button onclick="cubo()">Calcular</button>
             <p id="res-cub">Resultado: </p>
         </div>
 
@@ -71,7 +71,7 @@
             <input type="number" id="pro1" placeholder="Nota 1">
             <input type="number" id="pro2" placeholder="Nota 2">
             <input type="number" id="pro3" placeholder="Nota 3">
-            <button onclick="ejecutarPromedio()">Calcular</button>
+            <button onclick="promedio()">Calcular</button>
             <p id="res-pro">Resultado: </p>
         </div>
 
@@ -79,7 +79,7 @@
         <div class="tarjeta">
             <h3>8. Par o Impar</h3>
             <input type="number" id="par1" placeholder="Número">
-            <button onclick="ejecutarPar()">Verificar</button>
+            <button onclick="esPar()">Verificar</button>
             <p id="res-par">Resultado: </p>
         </div>
 
@@ -88,7 +88,7 @@
             <h3>9. Mayor de dos</h3>
             <input type="number" id="may1" placeholder="Número 1">
             <input type="number" id="may2" placeholder="Número 2">
-            <button onclick="ejecutarMayor()">Verificar</button>
+            <button onclick="mayorDeDos()">Verificar</button>
             <p id="res-may">Resultado: </p>
         </div>
 
@@ -97,7 +97,7 @@
             <h3>10. Área Triángulo</h3>
             <input type="number" id="tri1" placeholder="Base">
             <input type="number" id="tri2" placeholder="Altura">
-            <button onclick="ejecutarArea()">Calcular</button>
+            <button onclick="areaTriangulo()">Calcular</button>
             <p id="res-tri">Resultado: </p>
         </div>
 
@@ -106,7 +106,7 @@
             <h3>11. Calcular IMC</h3>
             <input type="number" id="imc-peso" placeholder="Peso (kg)">
             <input type="number" id="imc-altura" placeholder="Altura (m, ej: 1.65)">
-            <button onclick="ejecutarIMC()">Calcular</button>
+            <button onclick="calcularIMC()">Calcular</button>
             <p id="res-imc">Resultado: </p>
         </div>
 
@@ -114,7 +114,7 @@
         <div class="tarjeta">
             <h3>12. Mayor de Edad</h3>
             <input type="number" id="eda1" placeholder="Edad">
-            <button onclick="ejecutarEdad()">Verificar</button>
+            <button onclick="mayorDeEdad()">Verificar</button>
             <p id="res-eda">Resultado: </p>
         </div>
 
@@ -122,7 +122,7 @@
         <div class="tarjeta">
             <h3>13. Perímetro Cuadrado</h3>
             <input type="number" id="per1" placeholder="Lado">
-            <button onclick="ejecutarPerimetro()">Calcular</button>
+            <button onclick="perimetroCuadrado()">Calcular</button>
             <p id="res-per">Resultado: </p>
         </div>
 
@@ -130,7 +130,7 @@
         <div class="tarjeta">
             <h3>14. Pos. o Neg.</h3>
             <input type="number" id="pos1" placeholder="Número">
-            <button onclick="ejecutarPositivo()">Verificar</button>
+            <button onclick="positivoNegativo()">Verificar</button>
             <p id="res-pos">Resultado: </p>
         </div>
 
@@ -138,87 +138,9 @@
         <div class="tarjeta">
             <h3>15. Saludar</h3>
             <input type="text" id="sal1" placeholder="Tu nombre">
-            <button onclick="ejecutarSaludo()">Saludar</button>
+            <button onclick="saludar()">Saludar</button>
             <p id="res-sal">Resultado: </p>
         </div>
     </div>
-
-    <!-- Script intermediario para leer inputs y mostrar en pantalla -->
-    <script>
-        function ejecutarSuma() {
-            let n1 = Number(document.getElementById("sum1").value);
-            let n2 = Number(document.getElementById("sum2").value);
-            document.getElementById("res-sum").innerText = "Resultado: " + sumar(n1, n2);
-        }
-        function ejecutarResta() {
-            let n1 = Number(document.getElementById("res1").value);
-            let n2 = Number(document.getElementById("res2").value);
-            document.getElementById("res-res").innerText = "Resultado: " + restar(n1, n2);
-        }
-        function ejecutarMultiplicar() {
-            let n1 = Number(document.getElementById("mul1").value);
-            let n2 = Number(document.getElementById("mul2").value);
-            document.getElementById("res-mul").innerText = "Resultado: " + multiplicar(n1, n2);
-        }
-        function ejecutarDividir() {
-            let n1 = Number(document.getElementById("div1").value);
-            let n2 = Number(document.getElementById("div2").value);
-            document.getElementById("res-div").innerText = "Resultado: " + dividir(n1, n2);
-        }
-        function ejecutarCuadrado() {
-            let n1 = Number(document.getElementById("cua1").value);
-            document.getElementById("res-cua").innerText = "Resultado: " + cuadrado(n1);
-        }
-        function ejecutarCubo() {
-            let n1 = Number(document.getElementById("cub1").value);
-            document.getElementById("res-cub").innerText = "Resultado: " + cubo(n1);
-        }
-        function ejecutarPromedio() {
-            let n1 = Number(document.getElementById("pro1").value);
-            let n2 = Number(document.getElementById("pro2").value);
-            let n3 = Number(document.getElementById("pro3").value);
-            document.getElementById("res-pro").innerText = "Resultado: " + promedio(n1, n2, n3);
-        }
-        function ejecutarPar() {
-            let n1 = Number(document.getElementById("par1").value);
-            document.getElementById("res-par").innerText = "Resultado: " + esPar(n1);
-        }
-        function ejecutarMayor() {
-            let n1 = Number(document.getElementById("may1").value);
-            let n2 = Number(document.getElementById("may2").value);
-            document.getElementById("res-may").innerText = "Resultado: " + mayorDeDos(n1, n2);
-        }
-        function ejecutarArea() {
-            let n1 = Number(document.getElementById("tri1").value);
-            let n2 = Number(document.getElementById("tri2").value);
-            document.getElementById("res-tri").innerText = "Resultado: " + areaTriangulo(n1, n2);
-        }
-        function ejecutarIMC() {
-            let peso = Number(document.getElementById("imc-peso").value);
-            let altura = Number(document.getElementById("imc-altura").value);
-            
-            // Calculamos el IMC
-            let imc = calcularIMC(peso, altura);
-            
-            // Usamos .toFixed(2) para mostrar solo 2 decimales y que se vea mejor
-            document.getElementById("res-imc").innerText = "Resultado: " + imc.toFixed(2);
-        }
-        function ejecutarEdad() {
-            let n1 = Number(document.getElementById("eda1").value);
-            document.getElementById("res-eda").innerText = "Resultado: " + mayorDeEdad(n1);
-        }
-        function ejecutarPerimetro() {
-            let n1 = Number(document.getElementById("per1").value);
-            document.getElementById("res-per").innerText = "Resultado: " + perimetroCuadrado(n1);
-        }
-        function ejecutarPositivo() {
-            let n1 = Number(document.getElementById("pos1").value);
-            document.getElementById("res-pos").innerText = "Resultado: " + positivoNegativo(n1);
-        }
-        function ejecutarSaludo() {
-            let nombre = document.getElementById("sal1").value;
-            document.getElementById("res-sal").innerText = "Resultado: " + saludar(nombre);
-        }
-    </script>
 </body>
 </html>
